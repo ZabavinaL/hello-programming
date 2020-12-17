@@ -1,44 +1,46 @@
-# Отчет о тестировании "KeyValidator" #
-## Краткое описание ##
-16.12.2020 - 16.12.2020 было проведено тестирование установки, тестирование взаимодействия, функциональное тестирование приложения 'KeyValidator"
+# Отчет о тестировании "Credit Card Number Validator"
+## Краткое описание
+17.12.2020 - 17.12.2020 было проведено тестирование установки, тестирование взаимодействия, функциональное тестирование приложения "Credit Card Number Validator"
 
-На тестирование затрачено: 4 часа
+На тестирование затрачено: 3 часа
 
 В результате тестирования выявлены следующие дефекты:
 
-* https://github.com/ZabavinaL/KeyValidator/issues/1#issue-769123622
-* https://github.com/ZabavinaL/KeyValidator/issues/2#issue-769151942 
+* [Credit Card Number Validator. Некорректная валидация номера карты типа "Visa 13 digit"](https://github.com/ZabavinaL/hello-programming/issues/1#issue-770215142)
+* [Credit Card Number Validator. Некорректная валидация номера карты типа "American Express"](https://github.com/ZabavinaL/hello-programming/issues/2#issue-770219675) 
+* [Credit Card Number Validator. Некорректная валидация номера карты типа "Diners Club"](https://github.com/ZabavinaL/hello-programming/issues/3#issue-770224586)
+* [Credit Card Number Validator. Некорректная валидация номера карты типа "enRoute"](https://github.com/ZabavinaL/hello-programming/issues/4#issue-770229097)
+* [Credit Card Number Validator. Некорректная валидация номера карты типа "JCB 15 digit"](https://github.com/ZabavinaL/hello-programming/issues/5#issue-770232667)
+* [Credit Card Number Validator. Некорректная валидация номера карты типа "Voyager"](https://github.com/ZabavinaL/hello-programming/issues/6#issue-770236491)
 
-# Описание процесса тестирования #
+# Описание процесса тестирования
 В процессе тестирования использовались следующие артефакты:
-* [Инструкция по установке OpenJDK11](https://github.com/netology-code/javaqa-homeworks/blob/master/intro/openjdk11-manual.md)
-* [Руководство использования](https://github.com/netology-code/javaqa-homeworks/blob/master/intro/user-manual.md)
+* [Руководство по установке IntelliJ IDEA](https://github.com/netology-code/javaqa-homeworks/blob/master/intro/idea.md)
+* [Генератор валидных номеров карт ](https://www.getcreditcardnumbers.com/)
 
-В качестве тестовых данных использовались [данные](https://github.com/netology-code/javaqa-homeworks/blob/master/intro/user-manual.md):
-1. Валидные ключи:
-    * **8f05e6a7-70e9-33d7-bfe7-b19eae0d8998**
-        * _Result for 8f05e6a7-70e9-33d7-bfe7-b19eae0d8998: OK_
-    * **80b427f8-92cd-3aae-ba04-3927fbe17c6**
-        * _Result for 80b427f8-92cd-3aae-ba04-3927fbe17c6: OK_
-    * **b295bc63-9f03-3b4b-af80-969b39f8c262**
-        * _Result for b295bc63-9f03-3b4b-af80-969b39f8c262: OK_
-    * **387eedc6-12e9-3b32-9881-63b6b5e85317**
-        * _Result for 387eedc6-12e9-3b32-9881-63b6b5e85317: OK_
-    * **c19a8cf9-5c3a-37c5-b7f3-d16d38a0c180**
-        * _Result for c19a8cf9-5c3a-37c5-b7f3-d16d38a0c180: OK_
-
-2. Невалидные ключи:
-    * **18252235-78e0-44a5-8720-556f0c7da17a**
-        * _Result for 18252235-78e0-44a5-8720-556f0c7da17a: FAIL_
-    * **e66075b6-ddad-445e-baf6-161b3289522b**
-        * _Result for e66075b6-ddad-445e-baf6-161b3289522b: FAIL_
-    * **b6d53250-f07e-4352-a293-6102ddf7f1ca**
-        * _Result for b6d53250-f07e-4352-a293-6102ddf7f1ca: FAIL_
-    * **c2bc778a-1cb9-46c6-b435-0489649d2a42**
-        * _Result for c2bc778a-1cb9-46c6-b435-0489649d2a42: FAIL_
-    * **2fb98b44-93e7-3bdd-a2ad-79347bfe4ad1**
-        * _Result for 2fb98b44-93e7-3bdd-a2ad-79347bfe4ad1: FAIL_
+В качестве тестовых данных использовались [данные](https://www.getcreditcardnumbers.com/):
+1. **Visa:**
+    * 4024007178571294  Result is OK
+2. **Visa 13 digit:**
+    * 4916225084972 Result is OK
+3. **MasterCard:**
+    * 5100091231850006 Result is OK
+4. **American Express:**
+    * 370551084142417  Result is OK
+5. **Diners Сlub:**
+    * 38110840640182 Result is OK
+6. **Discover:**
+    * 6011335148464252 Result is OK
+7. **enRoute:**
+    * 201449803251954 Result is OK
+8. **JCB:**
+    * 3158901554234180 Result is OK
+9. **JCB 15 digit:**
+    * 210056648480695 Result is OK
+10. **Voyager:**
+    * 869909752163974 Result is OK
 
 Тестирование производилось в следующем окружении:
-* OC: MacOS Big Sur, версия 11.0.1
-* Версия Java: 15.0.1
+* **OC:** MacOS Big Sur, версия 11.0.1
+* **Версия JDK:** 11.0.9.1
+* **Версия IntelliJ IDEA:** 2020.3 (Community Edition)
